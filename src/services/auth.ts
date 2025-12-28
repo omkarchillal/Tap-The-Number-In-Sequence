@@ -4,7 +4,7 @@ import Config from 'react-native-config';
 
 
 export const configureGoogleSignIn = () => {
-  const webClientId = '51608571740-ltfu6u885eod5c09mtaj0auc5lclrvu9.apps.googleusercontent.com';
+  const webClientId = '530611835630-j0iic2qpfg55hlef3l6jsvnnrvec6408.apps.googleusercontent.com';
   console.log('Configuring Google Sign-In with Hardcoded ID:', webClientId);
   GoogleSignin.configure({
     webClientId: webClientId,
