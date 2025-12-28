@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, Image, ImageBackground, BackHandler } from 'react-native';
+import { View, Text, ScrollView, Image, ImageBackground, BackHandler, NativeModules } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import BounceButton from '../components/BounceButton';
@@ -54,7 +54,14 @@ const HomeScreen: React.FC<Props> = ({ onStart, onLogout, highScore, playerName,
 
   const handleExitConfirm = () => {
     soundManager.stopBackgroundMusic();
-    BackHandler.exitApp();
+    // Use the native module to kill the process
+    const AppExit = NativeModules.AppExit;
+    if (AppExit) {
+      AppExit.exitApp();
+    } else {
+      // Fallback for development/iOS if module missing
+      BackHandler.exitApp();
+    }
   };
 
   const handleExitCancel = () => {
