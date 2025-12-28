@@ -79,9 +79,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.tap_the_number_in_sequence"
+    namespace "com.tap_number_in_sequence"
     defaultConfig {
-        applicationId "com.tap_the_number_in_sequence"
+        applicationId "com.tap_number_in_sequence"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

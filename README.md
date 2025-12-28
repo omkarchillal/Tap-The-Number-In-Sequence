@@ -61,6 +61,24 @@ A fast-paced, brain-training React Native mobile game where players must tap num
     ```
     *Note: Ensure your MongoDB connection string is set up in the backend.*
 
+### 4. Configuration (.env)
+
+You need to set up environment variables for both the mobile app and the backend.
+
+**Root Folder `.env`**
+Create a `.env` file in the root directory (same level as `package.json`):
+```env
+API_URL=http://YOUR_LOCAL_IP:3000
+GOOGLE_WEB_CLIENT_ID=your_client_id_from_google_services_json
+```
+
+**Backend Folder `.env`**
+Create a `.env` file in the `Backend` directory:
+```env
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/dbname
+PORT=3000
+```
+
 ## 🏃‍♂️ Running the App
 
 ### Step 1: Start Metro

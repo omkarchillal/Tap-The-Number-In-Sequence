@@ -1,4 +1,4 @@
-package com.tap_the_number_in_sequence
+package com.tap_number_in_sequence
 
 import android.app.Application
 import com.facebook.react.PackageList
